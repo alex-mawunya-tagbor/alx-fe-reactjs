@@ -8,33 +8,21 @@ import MainContent from './MainContent';
 import Footer from './Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <WelcomeMessage />
-    </>
-  )
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 font-sans text-center">
+      <header className="py-4">
+        <h1 className="text-3xl font-bold text-gray-800">My Favorite Cities</h1>
+      </header>
+      <main className="my-8 p-4 bg-white rounded-lg shadow-lg">
+        <p className="text-xl text-gray-700">Hello everyone, I am learning React at ALX!</p>
+        <p className="text-lg text-gray-600 mt-2">I am learning about JSX!</p>
+        <p className="text-lg text-gray-600 mt-4">I love to visit New York, Paris, and Tokyo.</p>
+      </main>
+      <footer className="py-4 text-sm text-gray-500">
+        <p>© 2023 City Lovers</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
